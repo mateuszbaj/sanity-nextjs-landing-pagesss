@@ -1,0 +1,39 @@
+.root {
+  color: var(--color-black, #333);
+  composes: center from '../styles/shared.module.css';
+  font-size: 0.8em;
+  padding-top: 2rem;
+}
+
+.nav {
+  composes: narrow-container from '../styles/shared.module.css';
+  padding: 3rem 1rem;
+}
+
+.nav a {
+  display: block;
+  line-height: 2em;
+  color: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.items {
+  display: flex;
+  margin: 0;
+}
+
+.item {
+  display: list-item;
+  margin-left: 1.8em;
+}
+
+.item:first-child {
+  display: block;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0.5;
+}

@@ -1,0 +1,62 @@
+@import "../../styles/custom-media.css";
+
+.root {
+  composes: center from "../../styles/shared.module.css";
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.container {
+  composes: narrow-container from "../../styles/shared.module.css";
+}
+
+.heading {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.form {
+  display: grid;
+
+  @media (--media-min-medium) {
+    min-width: 34rem;
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+}
+
+.form input {
+  display: block;
+  border: 1px solid var(--color-black, #000);
+  flex-grow: 1;
+  padding: 1em;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  box-sizing: border-box;
+
+  @media (--media-min-medium) {
+    padding: 1em;
+  }
+
+}
+
+.form button {
+  margin-top: 1rem;
+  display: block;
+  padding: 1em;
+  border: 1px solid var(--color-black, #000);
+
+  @media (--media-min-medium) {
+    margin-top: 0;
+    border-left: none;
+  }
+}
+
+.form button:hover {
+  background: var(--color-black, #000);
+  color: var(--color-white, #fff);
+}
